@@ -1,13 +1,30 @@
-$(window).scroll(function() {
-    let animationElements =  $('.animate-element');
-    console.log(animationElements);
-    for (animationElements of aniElement ) {
-        // if this element returns a true for check add run animation class
-        if ( checkElementOnScreen(aniElement) ) {
-            $(aniElement).addClass('run-animation');
-        }
-    }
+let animationElements;
+window.addEventListener("DOMContentLoaded", e => {
+    animationElements = document.querySelectorAll(".boodle-animation");
+    animationElements.forEach(aniElement => {
+        // setup datasets
+        let boodleDuration = aniElement.dataset.boodleDuration;
+        let boodleTiming = aniElement.dataset.boodleTiming;
+        console.dir(aniElement)
+        aniElement.style.animationDuration = boodleDuration + "ms";
+        aniElement.style.animationTimingFunction = boodleTiming;
 
+    })
+})
+
+
+
+$(window).scroll(function() {
+    
+    // console.log(animationElements);
+    animationElements.forEach(element => {
+        // console.log(element)
+        // if this element returns a true for check add run animation class
+        
+        if ( checkElementOnScreen(element) ) {    
+            $(element).addClass('run-animation');
+        }
+    }); 
 
     // let oTop = $('.animate-element').offset().top - window.innerHeight;
     // oTop = oTop+300;

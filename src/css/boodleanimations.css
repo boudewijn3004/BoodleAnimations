@@ -1,0 +1,32 @@
+.boodle-animation {
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-play-state: paused ;
+}
+
+.run-animation {
+    animation-play-state: running !important;
+}
+
+.boodle-image-slide-in-right {
+    animation: boodle-image-slide-in-right 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused ;
+
+    
+}
+
+
+@keyframes boodle-image-slide-in-right {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+
+}
+
