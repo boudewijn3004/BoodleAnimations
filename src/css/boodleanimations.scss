@@ -1,0 +1,218 @@
+.boodle-animation {
+    -webkit-animation-fill-mode: forwards !important;
+    -moz-animation-fill-mode: forwards !important;
+    -o-animation-fill-mode: forwards !important;
+    -ms-animation-fill-mode: forwards !important;
+    animation-fill-mode: forwards !important;
+    animation-play-state: paused !important;
+    overflow: hidden;
+  }
+  
+  .boodle-animation:not([class^=run-animation]) {
+    animation-name: none;
+  }
+  
+  .run-animation {
+    animation-play-state: running !important;
+  }
+  
+  /*  doesn't work */
+  .run-revert-animation {
+    animation-direction: reverse !important;
+    animation-play-state: running !important;
+  }
+  
+  /* boodle fades  */
+  .boodle-fade-up {
+    animation-duration: 2000ms;
+    animation-play-state: paused;
+    opacity: 0;
+  }
+  .boodle-fade-up.run-animation {
+    animation-name: boodle-fade-up !important;
+  }
+  
+  @keyframes boodle-fade-up {
+    0% {
+      opacity: 0%;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0px);
+    }
+  }
+  .boodle-fade-left {
+    animation-duration: 2000ms;
+    animation-play-state: paused;
+    opacity: 0;
+    position: relative;
+  }
+  .boodle-fade-left.run-animation {
+    animation-name: boodle-fade-left !important;
+  }
+  
+  @keyframes boodle-fade-left {
+    0% {
+      opacity: 0%;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 100%;
+      transform: translateX(0px);
+    }
+  }
+  /* boodle zoom */
+  .boodle-zoom-in {
+    animation-duration: 2000ms;
+  }
+  .boodle-zoom-in.run-animation {
+    animation-name: boodle-zoom-in !important;
+  }
+  
+  @keyframes boodle-zoom-in {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.4);
+    }
+  }
+  .boodle-zoom-out {
+    animation-duration: 2000ms;
+  }
+  .boodle-zoom-out.run-animation {
+    animation-name: boodle-zoom-out !important;
+  }
+  
+  @keyframes boodle-zoom-out {
+    0% {
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  /* image slide  */
+  .boodle-image-slide-in-right {
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+  }
+  .boodle-image-slide-in-right.run-animation {
+    animation-name: boodle-image-slide-in-right !important;
+  }
+  
+  .boodle-image-slide-in-right img {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+  }
+  
+  @keyframes boodle-image-slide-in-right {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  .boodle-image-slide-in-left {
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+  }
+  .boodle-image-slide-in-left.run-animation {
+    animation-name: boodle-image-slide-in-left !important;
+  }
+  
+  .boodle-image-slide-in-left img {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  
+  @keyframes boodle-image-slide-in-left {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  .boodle-image-slide-in-top {
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+  }
+  .boodle-image-slide-in-top.run-animation {
+    animation-name: boodle-image-slide-in-top !important;
+  }
+  
+  .boodle-image-slide-in-top img, .boodle-image-slide-in-top figure {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  
+  @keyframes boodle-image-slide-in-top {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+  .boodle-image-slide-in-bottom {
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+  }
+  .boodle-image-slide-in-bottom.run-animation {
+    animation-name: boodle-image-slide-in-bottom !important;
+  }
+  
+  .boodle-image-slide-in-bottom img, .boodle-image-slide-in-bottom figure {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute !important;
+  }
+  
+  @keyframes boodle-image-slide-in-bottom {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+  
+  /*# sourceMappingURL=boodleanimations.css.map */
+  
